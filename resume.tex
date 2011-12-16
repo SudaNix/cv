@@ -1,244 +1,186 @@
-%______________________________________________________________________________________________________________________
-\documentclass[margin,line,a4paper]{resume}
-
-\usepackage{color}
-\usepackage{xcolor}
-\usepackage{tabularx,colortbl}
-\usepackage{url}
-\definecolor{light-gray}{gray}{.85} 
-\definecolor{mygrey}{gray}{0.80}
+%% start of file `template.tex'.
+%% Copyright 2006-2011 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
 
 
-\usepackage{hyperref}
-\definecolor{linkcolour}{rgb}{0,0.2,0.6}
-\hypersetup{colorlinks,breaklinks, urlcolor=linkcolour, linkcolor=linkcolour}
+\documentclass[11pt,a4paper]{moderncv}
 
+% moderncv themes
+\moderncvtheme[blue]{casual}                  % optional argument are 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
+%\moderncvtheme[green]{classic}               % idem
 
-%-----------------------------------------------------------
-%Custom commands
-\newcommand{\resheading}[1]{{\large \colorbox{mygrey}{\begin{minipage}{\textwidth}{\textbf{#1 \vphantom{p\^{E}}}}\end{minipage}}}}
+% character encoding
+\usepackage[utf8]{inputenc}                   % replace by the encoding you are using
+%\usepackage{CJKutf8}                         % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
 
+% adjust the page margins
+\usepackage[scale=0.8]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}           % if you want to change the width of the column with the dates
+%\setlength{\maketitlenamewidth}{10cm}}       % only for the classic theme, if you want to change the width of your name placeholder (to leave more space for your address details
 
+% personal data
+\firstname{Ahmed}
+\familyname{Isam Abdelrahim}
+\title{Resumé title (Ahmed Resume)}               % optional, remove the line if not wanted
+\address{Saudi Arabia}{Riyadh}    % optional, remove the line if not wanted
+\mobile{mobile (+966 540894249)}                    % optional, remove the line if not wanted
+\email{email (suda.nix@hotmail.com)}                      % optional, remove the line if not wanted
+\homepage{homepage (http://ahmed.sudancs.com)}                % optional, remove the line if not wanted
+%\extrainfo{additional information (optional)} % optional, remove the line if not wanted
+\photo[64pt][0.4pt]{qtcer}                  % '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file; optional, remove the line if not wanted
+\quote{Software/System Engineer}                 % optional, remove the line if not wanted
 
-%______________________________________________________________________________________________________________________
+% to show numerical labels in the bibliography; only useful if you make citations in your resume
+\makeatletter
+\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+\makeatother
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+
+%\nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
 \begin{document}
-\name{\Large Ahmed Isam Abdelrahim}
-\begin{resume}
+%\begin{CJK*}{UTF8}{gbsn}                    % to typeset your resume in Chinese using CJK
+\maketitle
 
-    %__________________________________________________________________________________________________________________
-    % Contact Information
-    \section{\mysidestyle Contact\\Information}
+\renewcommand{\listitemsymbol}{-}            % change the symbol for lists
 
-    Nationality: Sudanese                            \hfill Date of Birth: 24 - Aug- 1985 \vspace{0mm}\\\vspace{0mm}%
-   Marital Status: Single                              \hfill mobile: +966 540894249          \vspace{0mm}\\\vspace{0mm}%
-    Website: \url{http://ahmed.sudancs.com}      \hfill e-mail: \href{mailto:suda.nix@hotmail.com}{suda.nix@hotmail.com}  \vspace{0mm}\\\vspace{-4.5mm}%
+%\section{Objective}
+%\cventry{}{Working in a growing company}{}{}{}{}  % arguments 3 to 6 can be left empty
 
-    %__________________________________________________________________________________________________________________
-    % Objective
-\section{\mysidestyle Objective}
-Software engineer with in-depth knowledge looking for challenging position in the field of application development and system programming to gain experience in the field and raise the work efficiency.
+\section{Summary of Qualifications}
+\cvlistitem{\small  Experience in Redhat linux systems administration, including analyzing, designing, developing tools, installing, maintaining, and repairing hardware, software, peripherals, and networks.}
+\cvlistitem{\small  Good software engineering skills, strong analytical, problem-solving and communication skills, eager to learn and develop new skill.}
+\cvlistitem{\small Over one year of experience in large scale software development using C/C++ and Qt.}
+\cvlistitem{\small Over one year experience in developing cross-platform desktop and web applications.}
+\cvlistitem{\small Experience in database systems and designing powerful relational models.}
+\cvlistitem{\small Experience in object oriented analysis and desing, UML and designing with patterns.}
+%\cvlistitem{\small Ability to architect and desing complete systems and using state-of-arts technology.}
 
-    %__________________________________________________________________________________________________________________
-    % Summary
-    \section{\mysidestyle Summary}
+
+\section{Education}
+\cventry{October 2004 -- July 2010}{Bachelor (BSc) Degree in Computer Sciences}{University of Khartoum}{Faculty of Mathematical Sciences}{\textit{Second-class Honours, upper division (2:1)}}{Description}  % arguments 3 to 6 can be left empty
+
+%\section{Bachelor Thesis}
+%\cvline{title}{\emph{Title}}
+%\cvline{supervisors}{Supervisors}
+%\cvline{description}{\small Short thesis abstract}
+
+\section{Certification}
+\cventry{November 2010}{Nokia Certified Qt Developer}{}{}{}{}  % arguments 3 to 6 can be left empty
+
+\section{Technical skills}
+\cvline{Programming languages}{\small C ,C++, Java, PHP, Java Script, ASP.NET, C\# and x86 Assembly}
+\cvline{Frameworks}{\small Qt, .Net, Android and CodeIgniter}
+\cvline{DBMS}{\small MySQL, SQLite, PostgreSQL ,MS SQL Server and Oracle}
+\cvline{VCS}{\small Git,Svn,CVS}
+\cvline{OS}{\small Linux, Windows}
+\cvline{Typesetting}{\small \LaTeX{}}
+
+\section{Experience}
+\subsection{Full time}
+\cventry{December 2010 -- present}{Software Engineer}{Center of Excellence in Information Assurance}{King Saud University}{Saudi Arabia}{Serving as software engineer, my main responsibilities include \textsl{gathering and analysis requirments, software desing and implementation, software testing, documentation, assist researchers.}\\ \newline{}%
+Detailed achievements: \\
 \begin{itemize}
-\item +1 year experience in software development for large scale industry using C,C++ and Qt.
-\item Experience in research oriented projects and developing proof of concept and prototype model.
-\item Experience in translating on-paper thoughts, through design specification and implementation and verification, into a robust shipping product.
-\item Experience on software engineering methodologies, practice and tools.
-\item Hand-on experience on operating system development, kernel and system programming, free and open source applications/libraries development.
-\end{itemize}
-
-    %__________________________________________________________________________________________________________________
-    % Education
-    \section{\mysidestyle Education}
-
-    \textbf{University of Khartoum} - Faculty of Mathematical Sciences. \vspace{2mm}\\\vspace{1mm}%
-    \textsl{Bachelor (BSc) Degree in Computer Sciences} \hfill \textbf{ October 2004 -- July 2010} \\%
-    \textsl{Second-class Honours, upper division (2:1)}\vspace{-3mm}\\\vspace{-1mm}%
-
-    %__________________________________________________________________________________________________________________
-    % Certification
-    \section{\mysidestyle Certification}
-
-    \textbf{Nokia Certified Qt Developer.} \hfill \textbf{November 2010} \vspace{-3mm}\\\vspace{-1mm}%
-
-    %__________________________________________________________________________________________________________________
-    % Professional Experience
-    \section{\mysidestyle Professional\\Experience}
-
-    \textbf{Center of Excellence in Information Assurance}, King Saud University , KSA. \vspace{2mm}\\\vspace{1mm}%
-    \textsl{\textbf{Software Engineer}} \hfill \textbf{December 2010 -- present}\\
-     I am currently serving as software engineer at CoEIA, my main responsibilities include \textsl{gathering and analysis requirments, software desing and implementation, software testing, documentation, assist researchers}. some of projects I was doing in this period :
-
-\begin{itemize}
-\item \textbf{Parental Control System (Hajeb) - Software to Control PC and Internet}: 
-\begin{itemize}
-\item \textsl{Description}: a complete software suite  to constrain the usage of computer and internet. its capable of blocking unwanted web sites and programs , disconnect the Internet with respect to the Allowed Times Table, Monitor keystrokes, Monitor Screen and take Screenshot in a specific times, Sniffing HTTP requests, Manage each user in a separate profile. Also the software has a complete license and update system to generate and validate the serial numbers and doing auto-update for the components.
- 
-\item  \textsl{Role: Team Lead (Team of one)} : I Architect and design and implement the whole software.
-
+\item \textbf{Parental Control System (Hajeb) - Software to Control PC and Internet}:
+  \begin{itemize}
+  \item \textsl{Description}: a complete software suite  to constrain the usage of computer and internet. its capable of blocking unwanted web sites and programs , disconnect the internet, monitor keystrokes, monitor screen, sniffing http requests, manage each windows user in a separate profile.
+\item  \textsl{Role: Team Lead (Team of one)}.
 \item  \textsl{Technology/Libraries:} C++, Qt, Win32 API , Layered Service Provider (LSP), SQLite.
-
 \item  \textsl{Project size/Time:} 6 month project,  +11K Line of Code.
-\end{itemize}
-
+\item \textbf{Accepted as real case for Qt in Nokia website:} \url{http://qt.nokia.com/qt-in-use/project?id=a0F20000006M9TYEA0}
+  \end{itemize}
 \item \textbf{Privacy Control (CPC) - Software to Protect PC Privacy :}
 \begin{itemize}
 \item  \textsl{Description} : Developed a high level security application designed to help you completely eliminate sensitive information from your computer, protect your Internet privacy, and enhance system performance. CPC also functions as a wonderful clean up utility by removing useless files that slow down your computer. 
-
 \item  \textsl{Role: developer (Team of Three)} : I've involved in the desing and architect of the software, implement the most of the GUI stuff and help the developers to write custom model and custom tree to hold the data.
-
 \item  \textsl{Technology/Libraries:} C++, Qt, Win32 API, PHP, MySQL.
-
 \item  \textsl{Project size/Time:} 3 month project,  +5K Line of Code.
 \end{itemize}
-
 \item \textbf{Document Authentication system with QR-code}
 \begin{itemize}
 \item  \textsl{Description} : A prototype software to secure hard copy document from fraud and forgery by using 2D barcode tag containing some encrypted text from the orginal document so the other side can decrypt it and verify that no forgery occurs.
-
 \item  \textsl{Technology/Libraries:} C\# , Public/Private key encryption, QR-Code, .Net Gemalto Smart card.
 \end{itemize}
-
+\item \textbf{One Time Password Generator OTP}
+\begin{itemize}
+\item  \textsl{Description} : One time password generator.
+\item  \textsl{Technology/Libraries:} C\# , ASP.NET, WCF, SOAP, Java, Android. 
 \end{itemize}
-
-    \textbf{Center of Excellence in Information Assurance}, King Saud University , KSA. \vspace{2mm}\\\vspace{1mm}%
-    \textsl{\textbf{Software Engineer}} \hfill \textbf{December 2010 -- present}\\
-     I am currently serving as software engineer at CoEIA, my main responsibilities include \textsl{gathering and analysis requirments, software desing and implementation, software testing, documentation, assist researchers}. some of projects I was doing in this period :
-
-   %__________________________________________________________________________________________________________________
-    % Computer Skills
-    \section{\mysidestyle Technical Skills: } 
-
-\begin{tabular}{ l  l }
-
- %\rowcolor{gray} \color{white}{ \textbf{Programming Languages:}} & \\
-\multicolumn{2}{l}{\textbf{Programming languages}} \\
-& C ,C++, Java, PHP, Java Script, C\# and x86 Assembly. \\
-
-\multicolumn{2}{l}{\textbf{Frameworks}} \\
-& Qt, .Net, Android and CodeIgniter \\
-
- %\rowcolor{gray} \color{white}{ \textbf{DBMS:}} & \\
-\multicolumn{2}{l}{\textbf{DBMS}} \\
-& MySQL, SQLite, PostgreSQL ,MS SQL Server and Oracle .\\
- 
-%\multicolumn{1}{| >{\columncolor[rgb]{0.8,0.8,0.8}}l|}{Applied Knowledge:} & \\
-\multicolumn{2}{ l}{\textbf{Applied Knowledge}} \\
-& UML/OOP/Design Patterns \\
-& Object oriented system analysis and design \\
-& Relational database design \\
-& Debugging and unit testing \\
-& Coding style and documentation \\
-& Linux RedHat Enterprise 5 administration,networking and security skills \\
+\end{itemize}}
 
 
- %\rowcolor{gray} \color{white}{ \textbf{Open Source Application/Tools/Libs:}} & \\
-\multicolumn{2}{l}{\textbf{Open Source Application/Tools/Libraries}} \\
-& GNU's tools and libraries\\
-& Asterisk : VOIP,PBX \\
-& Content management system: Joomla,wordpress \\
-& Control Version Managements: git,svn,cvs\\
-& Bug and Issue tracking system: Trac,mantisbt \\
-& \LaTeX{} typesetting system\\
-\end{tabular}
+%\cventry{year--year}{Job title}{Employer}{City}{}{Description line 1\newline{}Description line 2}
+
+\pagebreak
+
+\subsection{Part time}
+
+\cventry{2011}{Linux RedHat Engineer}{Saudi Telecom Company}{Saudi Arabi}{}{Work as Linux RedHat consultant.\newline{} \textsl{Some of the tasks:} RedHat installation, manage users and groups, installation and configuring servers (DNS,DHCP,FTP,...etc.), logs and reporting, backups, write shell script and automation tool and troubleshooting.}
+
+\cventry{2011}{Web developer}{Modern Technology}{Saudi Arabi}{}{Work as web developer for large scale voting system that accept votes via SMS, Email and Twitter\newline{} \textsl{Technology/Libraries:} PHP, Code Igniter, MySQL, XAMPP, Java, Ant, JUnit, C++,  Java Script, AJAX, JQuery, Gnokii, Linux.}
 
 
-    %__________________________________________________________________________________________________________________
-    % Honours and Awards
-    \section{\mysidestyle  Awards} 
-Nokia Qt Ambassador \hfill \textbf{July 2011}\\
-2nd place for University of Khartoum - Faculty of Mathematical sciences "School Got Talent" programming competition.\hfill \textbf{May 2010}\vspace{-3mm}\\\vspace{-1mm}%
-
-    %__________________________________________________________________________________________________________________
-    % Honours and Awards
-    \section{\mysidestyle  Training} 
-
-International Turnkey Systems (ITS) in Sudan.\hfill \textbf{July 2010}\vspace{-3mm}\\\vspace{-1mm}%
+\section{Academic Projects}
+\cvline{}{\small  \textbf{eqraOS}: An open source operating system written from scratch for academic purpose (graduate's project), it support alot of modern OS’s features like 32-bit PMode,interrupt-based,hybrid kernel,HAL layer,basic C++ runtime support,virtual memory with paging,support up-to 4 GiB physical memory,FAT12 file system,keyboard driver and boot from USB/CD (C/C++,Assembly).}
+\cvline{}{\textbf{Al-Moazen}: Cross platform GUI application for calculating Muslim prayers times by a powerful mathematical equations. it has a handful of features like Azan, Azkar and ability to run on Windows,Linux,Embedded devices and Mac OS X (C++/Qt).}
+\cvline{}{\textbf{Mobile Game}: TicTacToe for nokia symbian mobiles, it has two game modes: standard and extension mode and it support online playing with Internet or bluetooth. also the player can choose to play to other player or to the AI mobile.(C++/Qt).}
+\cvline{}{\textbf{Al-Mymana medical accouting system}: System for managing accounts for Al-Mymana medical in Sudan (C++/Qt).}
 
 
-  %__________________________________________________________________________________________________________________
-    % Publications
-     % \section{\mysidestyle Selected Articles on Internet }
-   %  ``Design and implementation of operating system'',
-    %  \textsl{University of Khartoum},2010.
+\section{Languages}
+%\cvlanguage{Arabic}{Expert}{native language}
+\cvline{Arabic}{\small native language.}
+\cvline{English}{\small working knowledge (excellent in reading, good in speaking \& listening).}
+
+\section{Community Experience}
+%\cvlistitem[+]{Moderating Qt Arabic community \url{http://qt-ar.org}}
+\cvline{2008 - present}{\small Moderating Qt Arabic community \url{http://qt-ar.org}.}
+\cvline{2008 - present}{\small Moderating Computer science community in Sudan \url{http://sudancs.com}.}
+\cvline{2009 - present}{\small Cross platform Administration in \url{http://arabteam2000.com}.}
 
 
-  %\vspace{-2mm}
-  %   ``Cross platform development with Qt'',
-    %  \textsl{Qt arabic community},2008.
+\section{Honours and Awards}
+\cvline{July 2011}{\small  Nokia Qt Ambassador.}
+\cvline{May 2010}{\small 2nd place for University of Khartoum - Faculty of Mathematical sciences "School Got Talent" programming competition.}
 
-  %\vspace{-2mm}
-  %   ``Data structure for absolute beginners'',
-    %  \textsl{Visual C for arab web site},2007.
+\section{Personal Skills}
+\cvline{}{\small Perfect ability to meet deadlines and work under pressure.}
+\cvline{}{\small Ability to work individual and as part of a team.}
+\cvline{}{\small Ability to think "outside the box".}
 
-  %\vspace{-2mm}
+\section{Personal Information}
+\cvline{Nationality}{\small Sudanese.}
+\cvline{Marital Status}{\small Single.}
+\cvline{Date of Birth}{\small 24 - Aug- 1985.}
 
-
-    %__________________________________________________________________________________________________________________
-    % Projects
-    \section{\mysidestyle Academic\\ Projects}
-
-\textbf{eqraOS}: An open source operating system written from scratch for academic purpose (graduate's project), it support alot of modern OS’s features like 32-bit PMode,Interrupt-based,Hybrid Kernel,HAL layer,Basic C++ runtime support,Virtual Memory with paging,support up-to 4 GiB physical memory,FAT12 file system,Keyboard driver and Boot from USB/CD (C/C++,Assembly).
-\vspace{-2mm}
-
-
-\textbf{Al-Moazen}: Cross platform GUI application for calculating Muslim prayers times by a powerful mathematical equations. it has a handful of features like Azan, Azkar and ability to run on Windows,Linux,Embedded devices and Mac OS X (C++/Qt).
-\vspace{-2mm}
+\section{Referees}
+\cvline{}{\small Available on request.}
 
 
-\textbf{SMS server}: Linux Application for sending and receiving SMS by connect a GSM modem to the computer (C++).
-\vspace{-2mm}
+% Publications from a BibTeX file without multibib\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% for BibTeX numerical labels
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{publications}                  % 'publications' is the name of a BibTeX file
 
-\textbf{Function plotter}: Cross platform mathematical functions plotter, it can draw all mathematical functinos. (C++/Qt).
-\vspace{-2mm}
+% Publications from a BibTeX file using the multibib package
+%\section{Publications}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}             % 'publications' is the name of a BibTeX file
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}             % 'publications' is the name of a BibTeX file
 
-\textbf{Al-Nozom managment system}: System for managing Al-Nozom company in Saudi Arabia, it was targeted to work in Windows,Linux and Nokia Symbian Mobiles (C++/Qt).
-\vspace{-2mm}
-
-\textbf{Al-Mymana medical accouting system}: System for managing accounts for Al-Mymana Medical in Sudan (C++/Qt).
-\vspace{-2mm}
-
-\textbf{Mobile Game}: TicTacToe for Nokia Symbian mobiles, it has two game modes: standard and extension mode and it support online playing with Internet or Bluetooth. Also the player can choose to play to other player or to the AI mobile.(C++/Qt).\\
-\vspace{-2mm}
-
-
-
-
-    %__________________________________________________________________________________________________________________
-    %  Community\\Experience
-\section{\mysidestyle  Community\\Experience} 
-Cross platform Administration in \url{http://arabteam2000.com} website.\hfill \textbf{2009 - present}\vspace{-2mm}
-
-Moderating Computer science community in Sudan \url{http://sudancs.com}.\hfill \textbf{2008 - present}\vspace{-2mm}
-
-Moderating Qt Arabic community \url{http://qt-ar.org} website.\hfill \textbf{2008 - present}\vspace{-3mm}\\\vspace{3mm}
-
-    %__________________________________________________________________________________________________________________
-    % Language
-\section{\mysidestyle Language}
-	\textbf{Arabic}:   native language.\\
-	\textbf{English}: working knowledge (excellent in reading, good in speaking \& listening).\\
-
-    %__________________________________________________________________________________________________________________
-    % Personal Skills
-\section{\mysidestyle Personal\\Skills}
-	Interactive and able to learn new technologies and Languages.\\
-	Perfect ability to meet deadlines and work under pressure.\\
-	Ability to work individual and as part of a team.\\
-	Ability to think "outside the box".
-
-    %__________________________________________________________________________________________________________________
-    % Referees
-    \section{\mysidestyle Referees} 
-    {\sl Available on request.}
-
-%______________________________________________________________________________________________________________________
-\end{resume}
+%\clearpage\end{CJK*}                        % if you are typesetting your resume in Chinese using CJK; the \clearpage is required for fancyhdr to work correctly with CJK, though it kills the page numbering by making \lastpage undefined
 \end{document}
 
 
-%______________________________________________________________________________________________________________________
-% EOF
-
+%% end of file `template_en.tex'.
