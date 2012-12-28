@@ -1,3 +1,8 @@
 Ahmed Isam Abdelrahim
 
 Software Engineer.
+
+------------------
+
+Compile tex file:
+pdflatex resume.tex
