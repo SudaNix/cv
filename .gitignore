@@ -4,3 +4,6 @@
 *.out
 *.synctex.gz
 *.cls
+.directory
+resume.fdb_latexmk
+resume.fls
